@@ -7,7 +7,12 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions
 (
 		features = {"./src/test/java/features/Login.feature",},
-		glue = {"stepdefination","hooks"}
+		glue = {"stepdefination","hooks"},
+		dryRun = false,
+		monochrome = true,
+		tags = "@smoketest and @regressiontest",
+		plugin = {"pretty","html:cucumberReport.html"}
+		
 
 
 
